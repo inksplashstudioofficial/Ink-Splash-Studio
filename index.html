@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Store</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Ink Splash Studio Store</h1>
+        <p>Quality products | Fast Delivery </p>
+    </header>
+
+    <section class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product" />
+            <h2>Premium T-Shirt</h2>
+            <p>High quality cotton | Custom print | Sizes S-XXL</p>
+            <h3>₹499</h3>
+            <button onclick="openForm('Premium T-Shirt', '₹499')">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Popup Form -->
+    <div id="orderForm" class="form-popup">
+        <form id="form" method="POST">
+            <h2>Order Form</h2>
+            <input type="hidden" id="product" name="product">
+            
+            <label>Name</label>
+            <input type="text" name="name" required />
+
+            <label>Phone</label>
+            <input type="text" name="phone" required />
+
+            <label>Address</label>
+            <textarea name="address" required></textarea>
+
+            <button type="submit">Place Order</button>
+            <a href="#" onclick="closeForm()">Cancel</a>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
